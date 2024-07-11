@@ -30,3 +30,33 @@ time.sleep(3)
 
 tabela = pandas.read_csv("produtos.csv")
 
+
+for linha in tabela.index:
+    #codigo
+    pyautogui.click(x=1078, y=257)
+    str(tabela.loc[linha, "codigo"])
+    pyautogui.write(str(tabela.loc[linha, "codigo"]))
+    #marca
+    pyautogui.press("tab")
+    pyautogui.write(str(tabela.loc[linha, "marca"]))
+    #tipo
+    pyautogui.press("tab")
+    pyautogui.write(str(tabela.loc[linha, "tipo"]))
+    #categoria
+    pyautogui.press("tab")
+    pyautogui.write(str(tabela.loc[linha, "categoria"]))
+    #preco_unitario
+    pyautogui.press("tab")
+    pyautogui.write(str(tabela.loc[linha, "preco_unitario"]))
+    #custo
+    pyautogui.press("tab")
+    pyautogui.write(str(tabela.loc[linha, "custo"]))
+    #obs
+    pyautogui.press("tab")
+    pyautogui.write(str(tabela.loc[linha, "custo"]))
+
+    pyautogui.press("tab")
+    pyautogui.press("enter")
+    pyautogui.scroll(6000)
+
+#2:08:06
