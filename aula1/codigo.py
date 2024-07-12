@@ -1,7 +1,6 @@
 import pyautogui
 import time
 import pandas
-print(pandas. __version__)
 
 pyautogui.PAUSE = 0.5
 
@@ -53,10 +52,12 @@ for linha in tabela.index:
     pyautogui.write(str(tabela.loc[linha, "custo"]))
     #obs
     pyautogui.press("tab")
-    pyautogui.write(str(tabela.loc[linha, "custo"]))
+
+    obss = str(tabela.loc[linha, "obs"])
+    if obss != "nan":
+        pyautogui.write(obss)
 
     pyautogui.press("tab")
     pyautogui.press("enter")
-    pyautogui.scroll(6000)
 
-#2:08:06
+    pyautogui.scroll(6000)
